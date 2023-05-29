@@ -44,7 +44,10 @@ import com.google.samples.apps.nowinandroid.feature.interests.navigation.navigat
 import com.google.samples.apps.nowinandroid.navigation.TopLevelDestination
 import com.google.samples.apps.nowinandroid.navigation.TopLevelDestination.BOOKMARKS
 import com.google.samples.apps.nowinandroid.navigation.TopLevelDestination.FOR_YOU
+import com.google.samples.apps.nowinandroid.navigation.TopLevelDestination.GITHUB_USER
 import com.google.samples.apps.nowinandroid.navigation.TopLevelDestination.INTERESTS
+import com.osung.github.navigation.githubUserRoute
+import com.osung.github.navigation.navigateToGithubUser
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.map
@@ -79,6 +82,7 @@ class NiaAppState(
             forYouNavigationRoute -> FOR_YOU
             bookmarksRoute -> BOOKMARKS
             interestsRoute -> INTERESTS
+            githubUserRoute -> GITHUB_USER
             else -> null
         }
 
@@ -132,6 +136,7 @@ class NiaAppState(
                 FOR_YOU -> navController.navigateToForYou(topLevelNavOptions)
                 BOOKMARKS -> navController.navigateToBookmarks(topLevelNavOptions)
                 INTERESTS -> navController.navigateToInterestsGraph(topLevelNavOptions)
+                GITHUB_USER -> navController.navigateToGithubUser(topLevelNavOptions)
             }
         }
     }

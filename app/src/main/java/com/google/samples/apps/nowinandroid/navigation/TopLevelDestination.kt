@@ -24,6 +24,7 @@ import com.google.samples.apps.nowinandroid.core.designsystem.icon.NiaIcons
 import com.google.samples.apps.nowinandroid.feature.bookmarks.R as bookmarksR
 import com.google.samples.apps.nowinandroid.feature.foryou.R as forYouR
 import com.google.samples.apps.nowinandroid.feature.interests.R as interestsR
+import com.google.samples.apps.nowinandroid.feature.github.R as githubUserR
 
 /**
  * Type for the top level destinations in the application. Each of these destinations
@@ -53,5 +54,11 @@ enum class TopLevelDestination(
         unselectedIcon = ImageVectorIcon(NiaIcons.Grid3x3),
         iconTextId = interestsR.string.interests,
         titleTextId = interestsR.string.interests,
+    ),
+    GITHUB_USER(
+        selectedIcon = ImageVectorIcon(NiaIcons.Grid3x3),
+        unselectedIcon = ImageVectorIcon(NiaIcons.Grid3x3),
+        iconTextId = githubUserR.string.github_user,
+        titleTextId = githubUserR.string.github_user,
     ),
 }

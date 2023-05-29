@@ -26,6 +26,7 @@ import com.google.samples.apps.nowinandroid.feature.foryou.navigation.forYouScre
 import com.google.samples.apps.nowinandroid.feature.interests.navigation.interestsGraph
 import com.google.samples.apps.nowinandroid.feature.topic.navigation.navigateToTopic
 import com.google.samples.apps.nowinandroid.feature.topic.navigation.topicScreen
+import com.osung.github.navigation.githubUserScreen
 
 /**
  * Top-level navigation graph. Navigation is organized as explained at
@@ -59,5 +60,6 @@ fun NiaNavHost(
                 )
             },
         )
+        githubUserScreen()
     }
 }
